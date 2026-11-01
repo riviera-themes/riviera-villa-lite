@@ -1,0 +1,22 @@
+# build output
+dist/
+lite-build/
+release/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment (real iCal links, keys)
+.env
+.env.*
+!.env.example
+
+# local Cloudflare files
+.wrangler/
+.dev.vars
+
+# editors and OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
