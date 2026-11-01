@@ -1,6 +1,6 @@
 # Riviera Villa: an Astro theme for a holiday villa's direct-booking website
 
-> **Lite edition** (free, MIT licence): one language, no availability calendar. Riviera Villa Pro, sold by Riviera Themes, adds four languages, a calendar synced with Airbnb, Booking.com and Vrbo, and Google VacationRental data.
+> **Lite edition** (free, MIT licence): one language, no availability calendar. Riviera Villa Pro adds four languages, a calendar synced with Airbnb, Booking.com and Vrbo, and Google VacationRental data. [Get Riviera Villa Pro](https://buy.polar.sh/polar_cl_giwhNBpe2Jzsty2tFyBLdPs9DhWoZR2KeRGla15k4Tj)
 
 A calm, photo-first website for one holiday rental. Guests read about the house, check the dates and send a booking request straight to the owner, with no platform fee.
 

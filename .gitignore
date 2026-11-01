@@ -2,6 +2,7 @@
 dist/
 lite-build/
 release/
+dist-lite-demo/
 .astro/
 
 # dependencies
