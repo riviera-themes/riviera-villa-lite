@@ -23,6 +23,8 @@ const links = [
   s.rates && { href: home('#rates'), label: ui.nav.rates },
 ].filter((l): l is { href: string; label: string } => Boolean(l));
 
+// Below 1024 px the pill floats 12 px inside the hero photo: the header's side padding is the hero's
+// (12 px, 22 px from 640 px) plus 12 px. Change both together.
 const bookHref = home(s.booking ? '#booking' : '#main');
 const fromPrice = Math.min(...villa.rates.seasons.map((x) => x.nightly));
 ---
@@ -30,12 +32,12 @@ const fromPrice = Math.min(...villa.rates.seasons.map((x) => x.nightly));
 <header
   data-header
   data-scrolled={page === 'home' ? 'false' : 'true'}
-  class="site-header pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 lg:px-6"
+  class="site-header pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-6 pt-3 sm:px-[34px] lg:px-6"
 >
   <div
-    class="pill pointer-events-auto flex w-full max-w-[1180px] items-center gap-4 rounded-full bg-surface/95 py-2 pl-5 pr-2 lg:w-auto lg:gap-[26px] lg:py-[10px] lg:pl-6 lg:pr-3"
+    class="pill pointer-events-auto flex w-full max-w-[1180px] items-center gap-3 rounded-full bg-surface/95 py-2 pl-4 pr-2 sm:gap-4 sm:pl-5 lg:w-auto lg:gap-[26px] lg:py-[10px] lg:pl-6 lg:pr-3"
   >
-    <a href={pagePath(locale, 'home')} class="logo mr-auto font-serif text-[21px] uppercase leading-none tracking-[0.04em] lg:mr-2 lg:text-[22px]">
+    <a href={pagePath(locale, 'home')} class="logo mr-auto font-serif text-[clamp(18px,5.6vw,21px)] uppercase leading-none tracking-[0.04em] lg:mr-2 lg:text-[22px]">
       {villa.property.name}
     </a>
     <nav aria-label={ui.nav.mainMenu} class="hidden lg:block">
@@ -59,13 +61,13 @@ const fromPrice = Math.min(...villa.rates.seasons.map((x) => x.nightly));
     </a>
     <button
       type="button"
-      class="btn btn-ghost !border-line !px-4 !py-[9px] !text-[14px] lg:!hidden"
+      class="btn btn-ghost !border-line !px-4 !py-[9px] !text-[14px] max-[389px]:!px-[13px] lg:!hidden"
       data-menu-open
       aria-haspopup="dialog"
       aria-controls="site-menu"
     >
       <Icon name="menu" size={18} />
-      {ui.nav.menu}
+      <span class="max-[389px]:sr-only">{ui.nav.menu}</span>
     </button>
   </div>
 </header>
